@@ -36,15 +36,15 @@ At the moment, only GaussianSquare and RaisedCosine pulses are implemented, but 
 
 ### Challenges I faced:
 - understand which parameters can be optimized symbolically or externally
-- find the raised cosine envelope expression
-- design an objective function that maps optimizer variables to physical pulse parameters without mixing optimization logic with pulse construction
+- identifying the appropriate raised-cosine envelope expression for control pulses
+- designing an objective function that maps optimizer variables to physical pulse parameters without mixing optimization logic with pulse construction
 - understanding optimization behavior that was physically correct but initially non-obvious, such as monotonic fidelity improvement due to under-rotation at fixed drive amplitude
 
 ### What interested me the most:
-- how seemingly small design choices have strong consequences for optimization behavior.
-- working with actual hamiltonian equations and being able to play with different parameters and analyze behavior
-- how ideas from signal processing—such as smooth turn-on/off and bandwidth control—naturally reappear in quantum control
-
+- how seemingly small design choices have strong consequences for optimization behavior
+- combining Hamiltonian equations with concrete numerical simulations and visualizations
+- how concepts from signal processing—such as smooth turn-on/off and bandwidth control—naturally reappear in quantum control
+- modifying pulse parameters and immediately analyzing their effect on system dynamics and gate fidelity
 
 
 ## install
