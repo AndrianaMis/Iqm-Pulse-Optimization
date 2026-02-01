@@ -1,6 +1,23 @@
 # IQM-Pulse-Optimization
-#
-## learned:
+## Instructions 
+There are two noteboooks **pulse_width_optimization.ipynb** and **iqm_pulse_optimization_task5.ipynb**.
+
+### *pulse_width_optimization.ipynb*:
+Contains the task 4 of the assignement:
+- Building the GaussianSquare pulse 
+- Convert the pulse into signal
+- define the Hamiltonian
+- Create the solver
+- defining the objective function with input the parameters we want to optimize
+- optimze the pulse width by maximizing the fidelity (minimizing 1-fid) using the *minimize_scalar* function
+### *iqm_pulse_optimization_task5.ipynb*:
+- building the raised cosine pulse and following the same steps as task 4. for this pulse
+- building a parameter-agnostic objective function, that receives only the optimization variables, reconstructs the full set of physical pulse parameters, builds the pulse, simulates the dynamics, and returns the cost.
+- creating a flexible environment in which we can interchange parameters to be optimized and fixed and pulse types
+ In order to change the optimization parameters (e.g. optimizing both *sigma* and *width* of GaussianSquare pulse) remove *sigma* from fixed_param and add it to optimize_param, and set pulse_type='GaussianSquare'
+For the time-being, only GaussianSquare and RaisedCosine are simulated, but with them s a baseline, its not hard to extend the pipeline
+
+### What I learned:
 - how to formulate pulse-shape optimization as control problem
 - the effective RWA Hamiltonian equation
 - how to identify and optimize the shape parameters of a pulse
@@ -9,19 +26,19 @@
 - how important my 'Communication Systems' class was in my undergraduate degree
 
 
-## next steps:
+### Next steps:
 - simulate the model with more energy levels to include leakage by including higher excited states in the static Hamiltonian ($H_0=\hbar \sum_{n=1}^{n=N}\omega_n|n><n|$)
 - include decoherence models to study pulse robustness under realistic noise
 - constrain or penalize solutions that rely on extensively long pulse shapes
 - explore other optimization methods as the number of pulse parameters increases
 
-## challenges I faced:
+### Challenges I faced:
 - understand which parameters can be optimized symbolically or externally
 - find the raised cosine envelope expression
 - design an objective function that maps optimizer variables to physical pulse parameters without mixing optimization logic with pulse construction
 - understanding optimization behavior that was physically correct but initially non-obvious, such as monotonic fidelity improvement due to under-rotation at fixed drive amplitude
 
-## what interested me the most:
+### What interested me the most:
 - how seemingly small design choices have strong consequences for optimization behavior.
 - working with actual hamiltonian equations and being able to play with different parameters and analyze behavior
 - how ideas from signal processing—such as smooth turn-on/off and bandwidth control—naturally reappear in quantum control
