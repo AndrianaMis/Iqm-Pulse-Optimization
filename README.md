@@ -6,11 +6,15 @@ project as a public GitHub repo which contains your notebook and a readme with i
 
 ## learned:
 - how to formulate pulse-shape optimization as control problem
-- what are the shape parameters of a pulse
+- the effective RWA Hamiltonian equation
+- how to identify and optimize the shape parameters of a pulse
 - got familiar with the qiskit dynamics library
-- how to differenciate plotting the pulse - signal - probabilities
+- the distinction between plotting the pulse envelope, the physical control signal, and state or population dynamics.
 - how important my 'Communication Systems' class was in my undergraduate degree
 
+
+## next steps:
+- simulate the model with more energy levels to include leakage ($H_0=\hbar \Sum_{n=1}^{n=N}\omega_n $)
 
 
 
