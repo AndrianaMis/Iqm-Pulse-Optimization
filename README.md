@@ -5,18 +5,20 @@ There are two noteboooks **pulse_width_optimization.ipynb** and **iqm_pulse_opti
 ### *pulse_width_optimization.ipynb*:
 Contains the task 4 of the assignement:
 - Building the GaussianSquare pulse 
-- Convert the pulse into signal
-- define the Hamiltonian
-- Create the solver
-- defining the objective function with input the parameters we want to optimize
-- optimze the pulse width by maximizing the fidelity (minimizing 1-fid) using the *minimize_scalar* function
+- Convert the pulse into a control signal
+- defining the system Hamiltonian
+- Creating the solver
+- defining the objective function with optimization parameters as input
+- optimzing the pulse width by maximizing the gate fidelity (minimizing: 1-fid) using the *minimize_scalar* function
 ### *iqm_pulse_optimization_task5.ipynb*:
-- building the raised cosine pulse and following the same steps as task 4. for this pulse
+- Building the raised-cosine pulse and following the same pipeline as in Task 4
 - building a parameter-agnostic objective function, that receives only the optimization variables, reconstructs the full set of physical pulse parameters, builds the pulse, simulates the dynamics, and returns the cost.
-- creating a flexible environment in which we can interchange parameters to be optimized and fixed and pulse types
- In order to change the optimization parameters (e.g. optimizing both *sigma* and *width* of GaussianSquare pulse) remove *sigma* from fixed_param and add it to optimize_param, and set pulse_type='GaussianSquare'
-For the time-being, only GaussianSquare and RaisedCosine are simulated, but with them s a baseline, its not hard to extend the pipeline
+- creating a flexible environment in which pulse types and optimized/fixed parameters can be interchanged easily
 
+
+To change the optimization parameters (e.g. optimizing both `sigma` and `width` for the GaussianSquare pulse), move `sigma` from `fixed_param` to `optimize_param` and set `pulse_type = "GaussianSquare"`.
+
+At the moment, only GaussianSquare and RaisedCosine pulses are implemented, but this setup provides a clear baseline and can be easily extended to additional pulse families.
 ### What I learned:
 - how to formulate pulse-shape optimization as control problem
 - the effective RWA Hamiltonian equation
