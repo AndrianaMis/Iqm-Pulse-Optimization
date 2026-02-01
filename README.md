@@ -1,21 +1,30 @@
 # IQM-Pulse-Optimization
-
-6. Summarize what you have learned, the main challenges, what interests you the most in this problem (if anything), and what you would investigate as the
-next step towards a more realistic optimization of the qubit performance with respect to the pulse. No fancy essay - bullet points are fine. Submit your
-project as a public GitHub repo which contains your notebook and a readme with installation instructions and your summary.
-
+#
 ## learned:
 - how to formulate pulse-shape optimization as control problem
 - the effective RWA Hamiltonian equation
 - how to identify and optimize the shape parameters of a pulse
-- got familiar with the qiskit dynamics library
+- how crucial pulse optimization is for qubit fidelity
 - the distinction between plotting the pulse envelope, the physical control signal, and state or population dynamics.
 - how important my 'Communication Systems' class was in my undergraduate degree
 
 
 ## next steps:
-- simulate the model with more energy levels to include leakage ($H_0=\hbar \Sum_{n=1}^{n=N}\omega_n $)
+- simulate the model with more energy levels to include leakage by including higher excited states in the static Hamiltonian ($H_0=\hbar \sum_{n=1}^{n=N}\omega_n|n><n|$)
+- include decoherence models to study pulse robustness under realistic noise
+- constrain or penalize solutions that rely on extensively long pulse shapes
+- explore other optimization methods as the number of pulse parameters increases
 
+## challenges I faced:
+- understand which parameters can be optimized symbolically or externally
+- find the raised cosine envelope expression
+- design an objective function that maps optimizer variables to physical pulse parameters without mixing optimization logic with pulse construction
+- understanding optimization behavior that was physically correct but initially non-obvious, such as monotonic fidelity improvement due to under-rotation at fixed drive amplitude
+
+## what interested me the most:
+- how seemingly small design choices have strong consequences for optimization behavior.
+- working with actual hamiltonian equations and being able to play with different parameters and analyze behavior
+- how ideas from signal processing—such as smooth turn-on/off and bandwidth control—naturally reappear in quantum control
 
 
 
