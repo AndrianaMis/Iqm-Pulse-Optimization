@@ -25,5 +25,5 @@ pip install numpy scipy matplotlib qiskit qiskit-dynamics
 ```bash
 jupyter notebook
 ```
-open pulse_width_optimization.ipynb to run the notebook containing the part 4 of the assignment (optimize GaussianSquare pulse width to maximize X-gate fidelity)
-open iqm_pulse_optimization_task5.ipynb to run the task 5 of the assignement (simulate RaisedCosine pulse, optimze its width to maximize X-gate fidelity, optimize all shape parameters of either GaussianSquare of RaisedCosine according to instructions for task 5.) 
+- open *pulse_width_optimization.ipynb* to run the notebook containing the part 4 of the assignment (optimize GaussianSquare pulse width to maximize X-gate fidelity)
+- open *iqm_pulse_optimization_task5.ipynb* to run the task 5 of the assignement (simulate RaisedCosine pulse, optimze its width to maximize X-gate fidelity, optimize all shape parameters of either GaussianSquare of RaisedCosine according to instructions for task 5.) 
