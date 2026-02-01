@@ -20,10 +20,10 @@ The notebook was tested with Python 3.10.
 conda create -n pulse-opt python=3.10
 conda activate pulse-opt
 pip install numpy scipy matplotlib qiskit qiskit-dynamics
-
+```
 ### run
 ```bash
 jupyter notebook
-
+```
 open pulse_width_optimization.ipynb to run the notebook containing the part 4 of the assignment (optimize GaussianSquare pulse width to maximize X-gate fidelity)
 open iqm_pulse_optimization_task5.ipynb to run the task 5 of the assignement (simulate RaisedCosine pulse, optimze its width to maximize X-gate fidelity, optimize all shape parameters of either GaussianSquare of RaisedCosine according to instructions for task 5.) 
