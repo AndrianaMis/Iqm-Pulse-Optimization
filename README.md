@@ -5,7 +5,11 @@ next step towards a more realistic optimization of the qubit performance with re
 project as a public GitHub repo which contains your notebook and a readme with installation instructions and your summary.
 
 ## learned:
--
+- how to formulate pulse-shape optimization as control problem
+- what are the shape parameters of a pulse
+- got familiar with the qiskit dynamics library
+- how to differenciate plotting the pulse - signal - probabilities
+- how important my 'Communication Systems' class was in my undergraduate degree
 
 
 
