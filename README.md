@@ -43,7 +43,7 @@ At the moment, only GaussianSquare and RaisedCosine pulses are implemented, but 
 ### What interested me the most:
 - how seemingly small design choices have strong consequences for optimization behavior
 - combining Hamiltonian equations with concrete numerical simulations and visualizations
-- how concepts from signal processing—such as smooth turn-on/off and bandwidth control—naturally reappear in quantum control
+- how concepts from signal processing, like smooth turn-on/off and bandwidth control, appear in quantum control
 - modifying pulse parameters and immediately analyzing their effect on system dynamics and gate fidelity
 
 
